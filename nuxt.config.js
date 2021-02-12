@@ -1,4 +1,5 @@
 export default {
+    telemetry: false,
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
         title: 'lutheran-artwork-tracker',
@@ -25,7 +26,7 @@ export default {
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
-        // https://go.nuxtjs.dev/tailwindcss
+        '@nuxtjs/dotenv',
         '@nuxtjs/tailwindcss',
     ],
 
