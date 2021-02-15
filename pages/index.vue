@@ -4,14 +4,14 @@
       <div class="login h-72 flex flex-col content-top space-y-12">
         <form class="w-login mx-auto space-y-5 p-8 bg-white shadow-lg rounded-md" @submit.prevent="onSubmit">
 
-          <LoginField inputType="email" label="Email Address" placeholder="Email" v-model="email" />
+          <LoginField inputType="email" label="Email Address" placeholder="Email" v-model="email"/>
 
-          <LoginField inputType="password" label="Password" placeholder="*************" v-model="password" :error="error" />
+          <LoginField inputType="password" label="Password" placeholder="*************" v-model="password" :error="error"/>
           
           <div class="flex space-x-8">
             <button type="submit" class="border rounded-xl p-3 bg-babyblue-light text-white font-black">Sign In</button>
             <Loading v-if="loading"/>
-            <button type="submit" class="text-babyblue-light font-bold">Forgot password?</button>
+            <ForgotPassword/>
           </div>
         </form>
         <div class="flex justify-center space-y-12">
