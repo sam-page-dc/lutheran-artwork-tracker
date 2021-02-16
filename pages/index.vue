@@ -10,7 +10,7 @@
           
           <div class="flex space-x-8">
             <button type="submit" class="border rounded-xl p-3 bg-babyblue-light text-white font-black">Sign In</button>
-            <Loading v-if="loading"/>
+            <Loading class="m-auto" v-if="loading"/>
             <ForgotPassword/>
           </div>
         </form>
@@ -51,7 +51,8 @@ export default {
           .currentUser.getIdTokenResult()
           .then((tokenResult) => {
             console.log("Login Succeeded", tokenResult.claims);
-            window.location.href = "https://projects.playables.net/keys/" // Temporary (Dashboard page added later)
+            //window.location.href = "https://projects.playables.net/keys/" // Temporary (Dashboard page added later)
+            this.$router.push({ name: "artwork" });
             firebase.auth().signOut() // Temporary (Log out button added later)
           })
       }
